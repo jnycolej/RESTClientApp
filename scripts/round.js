@@ -87,12 +87,14 @@ export async function startGame() {
     });
 
     //Button for standing (aka not taking anymore cards and working with the hand you have)
-    document.getElementById('stand').addEventListener('click', () => {
+    document.getElementById('stand').addEventListener('click', async () => {
         document.getElementById('hit').disabled = true;
         document.getElementById('stand').disabled = true;
 
         while(calcHandValue(dealerCards) < 17) {
-            dealerCards.push(drawCard(deckID, 1)[0]);
+            const newCard = await drawCard(deckID, 1);
+            dealerCards.push(newCard[0]);
+            displayCards(dealerCards, document.getElementById('dealer-cards'));
         }
 
         displayCards(dealerCards, document.getElementById('dealer-cards'));
