@@ -10,8 +10,6 @@ let playerCards = [];
 async function getNewDeck() {
     const result = await http.sendGETRequest(GET_CARDS);
     console.log(result);
-    //const deckID = result.deck_id;
-//  [state.deal] = json.results;
     const data = result;
     deckID = data.deck_id;
 }  
@@ -111,3 +109,18 @@ export async function startGame() {
         }
     });
 };
+
+export function resetGame() {
+    //Resets all game elements
+    deckID = null;
+    dealerCards = [];
+    playerCards = [];
+
+    //Clear the card displays
+    document.getElementById('dealer-cards').innerHTML = '';
+    document.getElementById('player-cards').innerHTML = '';
+
+    document.getElementById('message').textContent = '';
+
+
+}
