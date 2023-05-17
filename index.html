@@ -4,21 +4,25 @@
         <link rel="stylesheet" href="styles/cards.css">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/bootstrap-icons.css">
-        <script type='module' src='scripts/app.js'></script>        
+        <script type='module' src='scripts/app.js'></script>
     </head>
-    <body>
-        <h1>Blackjack Game</h1>
+    <body class="text-center bg-success">
+        <h1 class="display-1">Blackjack Game</h1>
         <div id="game">
-            <div id = "message">Welcome to Blackjack!</div>
+            <div id = "message" class="display-3">Welcome to Blackjack!</div>
             <div id="dealer-hand">
-                <h2>Dealer</h2>
+                <h4>Dealer</h4>
                 <div id="dealer-cards"></div>
             </div>
+            <br>
             <div id="player-hand">
-                <h2>Player</h2>
+                <h4>Player</h4>
                 <div id="player-cards"></div>
-                <button id="hit">Hit</button>
-                <button id="stand">Stand</button>
+                <div class="m-3 p-2">
+                    <button id="hit" class="btn btn-primary">Hit</button>
+                    <button id="stand" class="btn btn-primary">Stand</button>                    
+                </div>
+
             </div>
         </div>
 
