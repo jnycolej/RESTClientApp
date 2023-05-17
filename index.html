@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Blackjack Game</title>
+        <link rel="stylesheet" href="styles/cards.css">
+        <script type='module' src='scripts/app.js'></script>
+
+        </link>
+    </head>
+    <body>
+        <h1>Blackjack Game</h1>
+        <div id="game">
+            <div id = "message">Welcome to Blackjack!</div>
+            <div id="dealer-hand">
+                <h2>Dealer</h2>
+                <div id="dealer-cards"></div>
+            </div>
+            <div id="player-hand">
+                <h2>Player</h2>
+                <div id="player-cards"></div>
+                <button id="hit">Hit</button>
+                <button id="stand">Stand</button>
+            </div>
+        </div>
+
+        <script type="module" src="scripts/http.js"></script>
+        <script type="module" src="scripts/round.js"></script>
+    </body>
+</html>
