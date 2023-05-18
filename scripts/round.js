@@ -9,7 +9,7 @@ let playerCards = [];
 
 async function getNewDeck() {
     const result = await http.sendGETRequest(GET_CARDS);
-    console.log(result);
+    //console.log(result);
     const data = result;
     deckID = data.deck_id;
 }  
@@ -66,28 +66,35 @@ export async function startGame() {
     displayCards(dealerCards, document.getElementById('dealer-cards'));
     displayCards(playerCards, document.getElementById('player-cards'));
 
+    
+    const hitButton = document.getElementById('hit');
+    const standButton = document.getElementById('stand');   
+
     if(hasBlackJack(playerCards)) {
         document.getElementById('message').textContent = 'Blackjack! You win!';
         return;
     }
 
+
+
+
     //Button for hitting (taking another card from the deck)
-    document.getElementById('hit').addEventListener('click', async () => {
+    const hitButtonClickHandler = async () => {
         const newCard = await drawCard(deckID, 1);
         playerCards.push(newCard[0]);
         displayCards(playerCards, document.getElementById('player-cards'));
 
         if(calcHandValue(playerCards) > 21){
             document.getElementById('message').textContent = 'Bust! You Lose!';
-            document.getElementById('hit').disabled = true;
-            document.getElementById('stand').disabled = true;
+            hitButton.disabled = true;
+            standButton.disabled = true;
         }
-    });
+    };
 
     //Button for standing (aka not taking anymore cards and working with the hand you have)
-    document.getElementById('stand').addEventListener('click', async () => {
-        document.getElementById('hit').disabled = true;
-        document.getElementById('stand').disabled = true;
+    const standButtonClickHandler = async () => {
+        hitButton.disabled = true;
+        standButton.disabled = true;
 
         while(calcHandValue(dealerCards) < 17) {
             const newCard = await drawCard(deckID, 1);
@@ -107,20 +114,14 @@ export async function startGame() {
         } else {
             document.getElementById('message').textContent = 'It\'s a tie! You push!';
         }
-    });
+    };
+    
+    hitButton.addEventListener('click', hitButtonClickHandler);
+    standButton.addEventListener('click', standButtonClickHandler);
+
 };
 
 export function resetGame() {
-    //Resets all game elements
-    deckID = null;
-    dealerCards = [];
-    playerCards = [];
-
-    //Clear the card displays
-    document.getElementById('dealer-cards').innerHTML = '';
-    document.getElementById('player-cards').innerHTML = '';
-
-    document.getElementById('message').textContent = '';
-
-
-}
+    location.reload();
+  }
+  

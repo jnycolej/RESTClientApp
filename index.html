@@ -4,29 +4,62 @@
         <link rel="stylesheet" href="styles/cards.css">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/bootstrap-icons.css">
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type='module' src='scripts/app.js'></script>
     </head>
-    <body class="text-center bg-success">
-        <h1 class="display-1">Blackjack Game</h1>
-        <div id="game">
-            <div id = "message" class="display-3">Welcome to Blackjack!</div>
-            <div id="dealer-hand">
-                <h4>Dealer</h4>
-                <div id="dealer-cards"></div>
+    <body class="bg-success">
+        <!--<div class="d-flex justify-content-center">
+            <img class="position-absolute w-100 vh-100" src='assets/blackjack-background.png'>
+        </div> -->
+        <nav class="navbar navbar-expand-md navbar-light bg-secondary container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-house"></i> Home
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-options">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">
+                            <i class="bi bi-receipt"></i> Rules
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips.html">
+                            <i class="bi bi-question-square"></i> Tips
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <br>
-            <div id="player-hand">
-                <h4>Player</h4>
-                <div id="player-cards"></div>
-                <div class="m-3 p-2">
-                    <button id="hit" class="btn btn-primary">Hit</button>
-                    <button id="stand" class="btn btn-primary">Stand</button>                    
+        </nav> 
+        <div class="position-relative container text-center h-auto w-auto d-flex flex-column justify-content-center">
+            <h1 class="display-1">Blackjack Game</h1>
+            <div id="game">
+                <div id = "message" class="display-3 text-danger">Welcome to Blackjack!</div>
+                <a class="text-light" href="rules.html"><h4>Rules</h4></a>
+                <div id="dealer-hand">
+                    <h4>Dealer</h4>
+                    <div id="dealer-cards"></div>
                 </div>
+                <br>
+                <div id="player-hand">
+                    <h4>Player</h4>
+                    <div id="player-cards"></div>
+                    <div class="m-3 p-2">
+                        <button id="hit" class="btn btn-primary">Hit</button>
+                        <button id="stand" class="btn btn-primary">Stand</button>                    
+                    </div>
+                </div>
+                <button id="new-game" class="btn btn-primary">New Game</button>
             </div>
-            <button id="new-game" class="btn btn-primary">New Game</button>
         </div>
 
         <script type="module" src="scripts/http.js"></script>
         <script type="module" src="scripts/round.js"></script>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="scripts/bootstrap.bundle.min.js"></script>
     </body>
 </html>
