@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack Game - Rules</title>
+        <link rel="stylesheet" href="styles/cards.css">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/bootstrap-icons.css">
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='module' src='scripts/app.js'></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-secondary container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-house"></i> Home
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-options">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">
+                            <i class="bi bi-receipt"></i> Rules
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips.html">
+                            <i class="bi bi-question-square"></i> Tips
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="position-relative container text-center h-auto w-auto d-flex flex-column justify-content-center">
+            <h1 class="display-1">Blackjack Rules</h1>
+            <hr>
+            <h3 class="display-3">Overview:</h3>
+            <p>Blackjack, also known as 21, is a popular casino card game. 
+                The objective of the game is to have a hand total closer to
+                 21 than the dealer's hand, without exceeding 21.</p>
+            
+            <h3 class="display-3">Basic Rules</h3>
+            <hr>
+            <h4 class="display-4">Card Values</h4>
+            <ul>
+                <li>Numbered cards (2-10) are worth their face value.</li>
+                <li>Face cards (Jack, Queen, King) are worth 10 points each.</li>
+                <li>Ace can be counted as either 1 or 11 points, depending on the players choice and the hands total.</li>
+            </ul>
+            <hr>
+            <h4 class="display-4">Gameplay</h4>
+                <ul>
+                    <li>The game begins with the player placing a bet.</li>
+                    <li>The dealer deals two cards face up to each player. The dealer deals themselves two cards also, usually one card is face up and one card is face down for them.</li>
+                    <li>The player plays their hand first and has several options:
+                        <ul>
+                            <li><b>Hit</b>: The player can request additional cards, one at a time, to improve their hand's total. The can continue to hit until they decide
+                                to stand of their hand exceeds 21 (busts).</li>
+                            <li><b>Stand</b>: The player can choose to keep their current hand total and not receive any more cards.</li>
+                            <li><b>Double Down</b>: In some variations, the player can choose to double their original bet and recieve only one more card.</li>
+                            <li><b>Split</b>: If the player's first two cards have the same value (e.g., two 7s), they can split them into two separate hands.
+                                his requires placing an additional bet equal to the original. Each split hand is played independently.<small>Not a current functionality in this program</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            <hr>
+            <h4 class="display-4">Dealer's Turn:</h4>
+                <ul>
+                    <li>Once all players have finished their turns, the dealer reveals their face-down card.</li>
+                    <li>The dealer must follow a specific set of rules called the "house rules" that dictate their actions.</li>
+                    <li>Generally, the dealer must hit on any hand total of 16 or less and stand on a hand total of 17 or more.</li>
+                </ul>
+            <hr>
+            <h4 class="display-4">Winning and Losing</h4>
+                <ul>
+                    <li>If the player's hand exceeds 21 (busts), they lose their bet.</li>
+                    <li>If the dealer busts and the player has not busted, the player wins.</li>
+                    <li>If neither the player nor the dealer busts, the hand with a total closer to 21 wins.</li>
+                    <li>If the player's hand and the dealer's hand have the same total, it's a push, and the player's bet is returned.</li>
+                    <li>A natural blackjack occurs when the player's initial two cards consist of an Ace and a 10-point card. 
+                        A natural blackjack usually pays out at a higher rate, often 3:2.</li>
+                </ul>
+        </div>
+    </body>
+</html>
