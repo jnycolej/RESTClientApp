@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack Game - Tips</title>
+        <link rel="stylesheet" href="../styles/cards.css">
+        <link rel="stylesheet" href="../styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='module' src='scripts/app.js'></script>
+    </head>
+    <body class="bg-success">
+        <nav class="navbar navbar-expand-md navbar-light bg-secondary container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="bi bi-house"></i> Home
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                <i class="navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-options">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">
+                            <i class="bi bi-receipt"></i> Rules
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips.html">
+                            <i class="bi bi-question-square"></i> Tips
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="position-relative container h-auto w-auto d-flex flex-column bg-secondary">
+            <h1 class="display-1">Blackjack Tips</h1>
+                <h4>Here are some helpful tips for playing blackjack:</h4>
+                <hr>
+                <ul>
+                    <li>If your hand total is 8 or less, always hit.</li>
+                    <li>If you have a hard hand (no Aces or Aces counted as 1), 
+                        and your hand total is 12 to 16, hit if the dealer's upcard 
+                        is 7 or higher. Otherwise, stand
+                    </li>
+                    <li>If you have a hard hand, and your hand total is 17 or higher, always stand.</li>
+                    <li>If you have a soft hand (includes an Ace counted as 11), follow basic strategy for hitting or standing based on the total.</li>
+                    <li>If the dealer is showing a face card play on the assumption the reveal card is another face card or 10.</li>
+                </ul>
+        </div>
+    </body>

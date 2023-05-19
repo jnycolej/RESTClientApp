@@ -2,17 +2,17 @@
 <html>
     <head>
         <title>Blackjack Game - Rules</title>
-        <link rel="stylesheet" href="styles/cards.css">
-        <link rel="stylesheet" href="styles/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/bootstrap-icons.css">
+        <link rel="stylesheet" href="../styles/cards.css">
+        <link rel="stylesheet" href="../styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../styles/bootstrap-icons.css">
         <!-- Required meta tags -->
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type='module' src='scripts/app.js'></script>
     </head>
-    <body>
+    <body class="bg-dark">
         <nav class="navbar navbar-expand-md navbar-light bg-secondary container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <i class="bi bi-house"></i> Home
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
@@ -33,7 +33,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="position-relative container text-center h-auto w-auto d-flex flex-column justify-content-center">
+        <div class="position-relative container h-auto w-auto d-flex flex-column bg-secondary">
             <h1 class="display-1">Blackjack Rules</h1>
             <hr>
             <h3 class="display-3">Overview:</h3>
@@ -43,14 +43,14 @@
             
             <h3 class="display-3">Basic Rules</h3>
             <hr>
-            <h4 class="display-4">Card Values</h4>
+            <h4>Card Values</h4>
             <ul>
                 <li>Numbered cards (2-10) are worth their face value.</li>
                 <li>Face cards (Jack, Queen, King) are worth 10 points each.</li>
                 <li>Ace can be counted as either 1 or 11 points, depending on the players choice and the hands total.</li>
             </ul>
             <hr>
-            <h4 class="display-4">Gameplay</h4>
+            <h4>Gameplay</h4>
                 <ul>
                     <li>The game begins with the player placing a bet.</li>
                     <li>The dealer deals two cards face up to each player. The dealer deals themselves two cards also, usually one card is face up and one card is face down for them.</li>
@@ -66,14 +66,14 @@
                     </li>
                 </ul>
             <hr>
-            <h4 class="display-4">Dealer's Turn:</h4>
+            <h4>Dealer's Turn:</h4>
                 <ul>
                     <li>Once all players have finished their turns, the dealer reveals their face-down card.</li>
                     <li>The dealer must follow a specific set of rules called the "house rules" that dictate their actions.</li>
                     <li>Generally, the dealer must hit on any hand total of 16 or less and stand on a hand total of 17 or more.</li>
                 </ul>
             <hr>
-            <h4 class="display-4">Winning and Losing</h4>
+            <h4>Winning and Losing</h4>
                 <ul>
                     <li>If the player's hand exceeds 21 (busts), they lose their bet.</li>
                     <li>If the dealer busts and the player has not busted, the player wins.</li>
