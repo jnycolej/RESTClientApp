@@ -60,7 +60,7 @@ function hasBlackJack(cards) {
 
 export async function startGame() {
     await getNewDeck();
-    dealerCards = await drawCard(deckID, 2);
+    dealerCards = await drawCard(deckID, 1);
     playerCards = await drawCard(deckID, 2);
 
     displayCards(dealerCards, document.getElementById('dealer-cards'));
