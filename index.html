@@ -13,6 +13,7 @@
         <!--<div class="d-flex justify-content-center">
             <img class="position-absolute w-100 vh-100" src='assets/blackjack-background.png'>
         </div> -->
+        <!--Navbar-->
         <nav class="navbar navbar-expand-md navbar-light bg-secondary container-fluid">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-house"></i> Home
@@ -37,14 +38,17 @@
         </nav> 
         <div class="position-relative container text-center h-auto w-auto d-flex flex-column justify-content-center">
             <h1 class="display-1">Blackjack Game</h1>
+            <!--Blackjack Game-->
             <div id="game">
                 <div id = "message" class="display-3 text-danger">Welcome to Blackjack!</div>
                 <a class="text-light" href="pages/rules.html"><h4>Rules</h4></a>
+                <!--Dealer's Hand-->
                 <div id="dealer-hand">
                     <h4>Dealer</h4>
                     <div id="dealer-cards"></div>
                 </div>
                 <br>
+                <!--Player's Hand-->
                 <div id="player-hand">
                     <h4>Player</h4>
                     <div id="player-cards"></div>
@@ -53,10 +57,13 @@
                         <button id="stand" class="btn btn-primary">Stand</button>                    
                     </div>
                 </div>
+                <!-- button to start a new game after winning or losing-->
                 <button id="new-game" class="btn btn-primary">New Game</button>
             </div>
         </div>
+        
         <script type="module" src="scripts/http.js"></script>
+        <!--Gameplay Functionality-->
         <script type="module" src="scripts/round.js"></script>
         <!-- Bootstrap Bundle with Popper -->
         <script src="scripts/bootstrap.bundle.min.js"></script>
